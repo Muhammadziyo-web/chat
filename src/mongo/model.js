@@ -1,5 +1,8 @@
 import mongoose from "mongoose";
 
-mongoose.connect("mongodb://127.0.0.1:27017/myChatApp");
+mongoose.connect(
+  "mongodb+srv://mrvaliyev2006:valiyev1112@cluster0.qloynhe.mongodb.net/?retryWrites=true&w=majority"
+);
 
 export default mongoose
+ 
