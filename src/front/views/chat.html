@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatIT</title>
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/style/index.css" />
+  </head>
+  <body>
+    <div class="all-wrapper">
+
+      <div class="chats-wrapper">
+        <div class="search">
+          <div class="d-flex align-items-center gap-2 ps-1">
+            <i class="fa-solid fa-bars hover-shadow menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"></i>
+            <div class="search-inp">
+              <input type="text" id="searchInput" placeholder="Search users">
+              <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
+            </div>
+          </div>
+          <div class="searchRes">
+
+          </div>
+        </div>
+        <div class="chats">
+          <!-- <div class="user userPRV" data-username="Muhammadziyo">
+            <img
+              src="https://lh3.googleusercontent.com/proxy/81tWdMFqSPWG2nvUPqxCWYloa8B7avpnCfLa95fNdK4uOpYXBpM3d1TTvlLFNIB41uvhdJQpxkz0lVa2RdSrKqnz9wQX=w1200-h630-p-k-no-nu"
+              alt="ava"
+            />
+            <div>
+              <h6>Name</h6>
+              <span>Last Message</span>
+            </div>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="chat-window">
+        <div class="chat-header">
+          <img src="" alt="">4
+          <div class="chat-names">
+            <h3>Name</h3>
+            <p>online</p>
+          </div>
+        </div>
+        <div id="chat">
+          <form id="messageForm">
+            <input type="text" id="textInput" placeholder="Text ..." autocomplete="off" />
+            <button type="submit"><i class="fa-brands fa-telegram"></i></button>
+            <p id="desc"></p>
+          </form>
+        </div>
+      </div>
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+      Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+    </div>
+    <div class="dropdown mt-3">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+        Dropdown button
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+    </div>
+    
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"
+    ></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/plugin.js"></script>
+    <script src="/js/chat.js"></script>
+  </body>
+</html>
