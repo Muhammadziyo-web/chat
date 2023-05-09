@@ -1,4 +1,4 @@
-let mainurl = "http://10.10.0.122:3000/";
+let mainurl = "https://chat-2ojp.onrender.com/";
 
 const socket = io();
 
