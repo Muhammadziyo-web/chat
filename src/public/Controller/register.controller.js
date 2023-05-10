@@ -16,7 +16,7 @@ export default{
 
     (async function () {
         try {
-
+console.log(obj);
            let user= await userModel.create(obj)
                 res.send(user);
 
@@ -24,7 +24,8 @@ export default{
             if (error.code==11000) {
                 res.send({ err: "Username already taken" });
             } else {
-              res.send({ err: error.message.split(':').at(-1).trim() });
+              res.send({ err: error.message });
+              // .split(':').at(-1).trim()
             }
         }
 

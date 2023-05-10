@@ -18,6 +18,7 @@ app.use(cors())
 app.use(express.static(format("src", "front")));
 app.use(express.json());
 app.use(express.text());
+console.log('Request')
 app.use(Router);
 
 const io = new Server(httpServer, {});
