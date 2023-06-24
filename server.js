@@ -18,7 +18,6 @@ app.use(cors())
 app.use(express.static(format("src", "front")));
 app.use(express.json());
 app.use(express.text());
-console.log('Request')
 app.use(Router);
 
 const io = new Server(httpServer, {});
@@ -26,10 +25,7 @@ const io = new Server(httpServer, {});
 io.on("connection", (socket) => {
   console.log("connected");
   socket.on("message1", (data) => {
-    // console.log(data);
     sentMessage(data)
-
-
     io.emit("hello", {
       text: data.message,
       username:data.senderUsername
@@ -37,7 +33,7 @@ io.on("connection", (socket) => {
   });
 
   socket.on("disconnect", () => {
-    console.log("uzildi");
+    
   });
 });
 
