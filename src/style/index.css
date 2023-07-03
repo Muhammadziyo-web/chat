@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.form {
+  min-width: 400px;
+  width: 400px;
+  max-width: 90vw;
+}
+
+.all {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#messageForm {
+  width: 400px;
+  background: #290e4725;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  height: 50px;
+  bottom: 50px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 25px;
+}
+#messageForm input {
+  background: transparent;
+  color: #000;
+  border: 2px solid #00000050;
+  position: absolute;
+  height: 30px;
+  top: 10px;
+  left: 10px;
+  border-radius: 25px;
+  width: 340px;
+  padding-left: 10px;
+}
+#messageForm button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 30px;
+  width: 30px;
+  border: none;
+  border-radius: 25px;
+}
+#messageForm button i {
+  font-size: 30px;
+}
+
+#chat {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  padding: 50px;
+  padding-bottom: 100px;
+}
+
+.our .message {
+  background: #8f7ce6;
+  border-radius: 10px 10px 0 10px;
+  position: relative;
+}
+
+.our {
+  display: flex;
+  justify-content: end;
+}
+
+.message {
+  min-height: 2.25rem;
+  height: fit-content;
+  max-width: 300px;
+  min-width: 50px;
+  width: fit-content;
+  text-align: center;
+  padding: 10px;
+  word-break: break-all;
+  white-space: normal;
+}
+
+.their .message {
+  background: #888692;
+  border-radius: 10px 10px 10px 0;
+  padding-top: 20px;
+  position: relative;
+}
+
+.their .message::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background: inherit;
+  position: absolute;
+  left: -5px;
+  bottom: 0;
+  -webkit-clip-path: polygon(100% 0%, 100% 100%, 0 100%);
+clip-path: polygon(100% 0%, 100% 100%, 0 100%);
+}
+.our .message::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background: inherit;
+  position: absolute;
+  right:  -5px;
+  bottom: 0;
+ -webkit-clip-path: polygon(0 100%, 100% 100%, 0 0);
+clip-path: polygon(0 100%, 100% 100%, 0 0);
+}
+
+.their {
+  display: flex;
+  justify-content: start;
+}
+
+.nameSpan {
+  display: block;
+  width: fit-content;
+  height: fit-content;
+  font-size: 12px;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+}
+
+.messages {
+  width: 100%;
+  margin: 10px 0;
+}
+
+#textInput:focus {
+  outline: none;
+}
