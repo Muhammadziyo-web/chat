@@ -18,18 +18,14 @@ const io = new Server(httpServer, {});
 
 io.on("connection", (socket) => {
 
-    console.log("connected");
 
     socket.on('message1', (data) => {
 
-        console.log(data);
-        console.log(socket.id+ " dan  "+'xabar keldi');
 
         io.emit('hello',data) 
     })
 
     socket.on("disconnect", () => {
-      console.log("uzildi");
     });
 
 });
