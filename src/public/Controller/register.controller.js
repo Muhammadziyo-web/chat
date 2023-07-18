@@ -16,16 +16,18 @@ export default{
 
     (async function () {
         try {
-console.log(obj);
-           let user= await userModel.create(obj)
+          let user= await userModel.create(obj)
+          // console.log(user);
                 res.send(user);
 
         } catch (error) {
+          // console.log(error);
             if (error.code==11000) {
                 res.send({ err: "Username already taken" });
             } else {
-              res.send({ err: error.message });
-              // .split(':').at(-1).trim()
+              res
+                .status(400)
+                .json({ err: error.message.split(":").at(-1).trim() });
             }
         }
 

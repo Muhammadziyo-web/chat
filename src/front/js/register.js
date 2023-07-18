@@ -29,19 +29,26 @@ $("#form")?.addEventListener("submit", (e) => {
 
     if (datas?.status == 200) {
       let res = await datas.json();
-      console.log(res);
+      // console.log(datas.status);
+      // console.log(res);
       localStorage.setItem("token", res.uuid);
       localStorage.setItem("username", res.username);
       localStorage.setItem("name", res.name);
       window.location = "/";
     } else {
-      note.innerHTML = res.err;
+    //   console.log(
+    // datas.json()
+    //   );
+     datas= await datas.json();
+      // console.log();
+      console.log(datas);
+    note.innerHTML = (await datas).err;
     }
   }
   fetchs();
 });
 
-$("#login-form").addEventListener("submit", (e) => {
+$("#login-form")?.addEventListener("submit", (e) => {
   e.preventDefault();
   let userName = userNameLogin.value,
     password = passwordLogin.value;
